@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Finanças Pessoais</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Sistema de Controle de Finanças</h1>
+
+    <form id="form-transacao">
+      <input type="text" id="descricao" placeholder="Descrição" required />
+      <input type="number" id="valor" placeholder="Valor (R$)" required />
+      <select id="tipo">
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+      <input type="date" id="data" required />
+
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Saldo: R$ <span id="saldo">0,00</span></h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-transacoes"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
